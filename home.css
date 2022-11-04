@@ -1,0 +1,272 @@
+.ball-purple {
+    background-color: rgba(66, 0, 255, 0.5);
+    border-radius: 50%;
+    width: 11.17px;
+    height: 11.17px;
+    margin-top: 1px;
+}
+
+.background-img {
+    display: none;
+}
+
+.header {
+    display: flex;
+    padding: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+
+.div-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.div-header h1 {
+    font-size: var(--font-size-14);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-weight: 800;
+    color: var(--color-black);
+}
+
+.button-dropdown {
+    width: 23.25px;
+    height: 15.5px;
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.select-home {
+    width: 100%;
+    height: 52.18px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    text-align: center;
+    font-size: var(--font-size-18);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-400);
+}
+
+.div-buttons {
+    position: absolute;
+    transition: 1s ease;
+    top: 72px;
+    max-height: 0;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    align-items: center;
+}
+
+.buttons {
+    display: none;
+}
+
+.margin-top-normal {
+    max-height: 300px;
+    top: 72px;
+    transition: 1s ease;
+}
+
+.login {
+    display: none;
+    height: 45px;
+    width: 45%;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    background-color: var(--color-white);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-18);
+}
+
+.register {
+    display: none;
+    height: 45px;
+    width: 45%;
+    border: 1px solid var(--color-blue);
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-18);
+}
+
+.listCompanies {
+    background-color: #f8f8f8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    padding: 25px 25px 25px 20px;
+    display: flex;
+    gap: 15px;
+    overflow: scroll;
+}
+
+.card {
+    width: 241px;
+    max-width: 241px;
+    height: 211px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-blue);
+}
+
+.card h2 {
+    width: 241px;
+    margin-bottom: 74px;
+    font-weight: var(--font-weight-700);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-size: var(--font-size-20);
+    color: var(--color-black);
+}
+
+.card span {
+    margin-bottom: 22px;
+    font-weight: var(--font-weight-400);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-size: var(--font-size-16);
+    color: var(--color-black);
+}
+
+.card p {
+    border: 1px solid var(--color-blue);
+    padding: 5px;
+    border-radius: var(--border-radius-12);
+    max-width: 120px;
+    display: flex;
+    justify-content: center;
+    color: var(--color-blue);
+    font-weight: var(--font-weight-400);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-size: var(--font-size-16);
+}
+
+@media(min-width: 1100px){
+    .header {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+    .div-buttons {
+        display: none;
+    }
+    .button-dropdown {
+        display: none;
+    }
+    .margin-top-normal {
+        display: none;
+    }
+    .background-img {
+        display: flex;
+        width: 45%;
+        height: 743px;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        padding-left: 180px;
+        padding-right: 180px;
+        gap: 80px;
+    }
+    .select-home {
+        position: static;
+        height: 52.18px;
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        text-align: center;
+        font-size: var(--font-size-18);
+        font-style: var(--font-style);
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-400);
+    }
+    .div-header h1 {
+        font-size: var(--font-size-20);
+        font-style: var(--font-style);
+        font-family: var(--font-family);
+        font-weight: 800;
+        color: var(--color-black);
+    }
+    .ball-purple {
+        background-color: rgba(66, 0, 255, 0.5);
+        border-radius: 50%;
+        width: 11.17px;
+        height: 11.17px;
+        margin-top: 4px;
+    }
+    .div-container {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    .buttons {
+        display: flex;
+        width: 280px;
+        gap: 11px;
+    }
+    .login2 {
+        width: 134.5px;
+        height: 45px;
+        border: 1px solid var(--color-blue);
+        color: var(--color-blue);
+        background-color: var(--color-white);
+        font-style: var(--font-style);
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-size-18);
+    }
+    .register2 {
+        width: 134.5px;
+        height: 45px;
+        border: 1px solid var(--color-blue);
+        color: var(--color-white);
+        background-color: var(--color-blue);
+        font-style: var(--font-style);
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-size-18);
+    }
+    .listCompanies {
+        background-color: #f8f8f8;
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.12);
+        padding: 25px 25px 25px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow: auto;
+        max-height: 690.82px;
+        height: 100%;
+    }
+    .card {
+        width: 100%;
+        max-width: 100%;
+        height: 211px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        background-color: var(--color-white);
+        border-bottom: 1px solid var(--color-blue);
+    }
+}

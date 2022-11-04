@@ -1,0 +1,51 @@
+.div-cont-sucess {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 320px;
+    height: 90px;
+    background-color: var(--color-green);
+    border-radius: var(--border-radius-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: toastIt 4000ms ease-in forwards;
+    padding: 12px 12px;
+}
+
+.div-cont-sucess p {
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-700);
+}
+
+.div-cont-fail {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 320px;
+    height: 90px;
+    background-color: var(--color-red);
+    border-radius: var(--border-radius-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: toastIt 4000ms ease-in forwards;
+    padding: 12px 12px;
+}
+
+.div-cont-fail p {
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-700);
+}
+
+
+@keyframes toastIt {
+    0% {rigth: 30px; bottom: -100px}
+    25% {rigth: 30px; bottom: 20px}
+    50% {rigth: 30px; bottom: 20px}
+    100% {rigth: 30px; bottom: -100px}
+}

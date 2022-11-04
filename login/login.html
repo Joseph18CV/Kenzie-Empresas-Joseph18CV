@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../styles/toast.css">
+    <title>Login - Page</title>
+</head>
+<body>
+    <header class="header">
+        <div class="div-header">
+            <div class="ball-purple"></div>
+            <h1>Kenzie Empresas</h1>
+        </div>
+        <img class="button-dropdown" src="../src/img/button-dropdown.png">
+        <div class="buttons">
+            <button class="login2">Cadastro</button>
+            <button class="register2">Home</button>
+        </div>
+        <div class="div-buttons">
+            <button class="login">Cadastro</button>
+            <button class="register">Home</button>
+        </div>
+    </header>
+    <main class="container">
+        <img class="img-bg" src="../src/img/big-background-image.png">
+        <div class="div-container">
+            <h1>Login</h1>
+            <p>Preencha os campos para realizar login</p>
+            <form class="form">
+                <input type="email" placeholder="Seu e-mail" id="email" autocomplete="off">
+                <input type="password" placeholder="Sua senha" id="password" autocomplete="off">
+                <button type="submit" id="login" disabled>Login</button>
+                <span>ou</span>
+                <a href="../register/register.html">Cadastre-se</a>
+            </form>
+        </div>
+    </main>
+    <script type="module" src="./login.js"></script>
+</body>
+</html>

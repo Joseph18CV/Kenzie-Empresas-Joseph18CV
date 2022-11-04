@@ -1,0 +1,322 @@
+.ball-purple {
+    background-color: rgba(66, 0, 255, 0.5);
+    border-radius: 50%;
+    width: 11.17px;
+    height: 11.17px;
+    margin-top: 4px;
+}
+
+.header {
+    display: flex;
+    padding: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.div-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.div-header h1 {
+    font-size: var(--font-size-20);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-weight: 800;
+    color: var(--color-black);
+}
+
+.logOut {
+    height: 45px;
+    width: 10%;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    background-color: var(--color-white);
+    font-style: var(--font-style);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-18);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.div-container {
+    margin-top: 70px;
+    width: 81%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-container h2 {
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    color: var(--color-black);
+    font-size: var(--font-size-30);
+    font-weight: var(--font-weight-700);
+}
+
+.select-company {
+    margin-left: -55px;
+    width: 260px;
+    height: 28px;
+    text-align: center;
+    border-radius: var(--border-radius-12);
+}
+
+.form-button-create {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 100%;
+    padding-left: 15px;
+    width: 150px;
+    background-color: var(--color-blue);
+}
+
+.form-button-create span {
+    color: var(--color-white);
+    font-size: var(--font-size-30);
+    font-weight: var(--font-weight-700);
+}
+
+.form-button-create button {
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-700);
+    background-color: var(--color-blue);
+    text-decoration: none;
+    border: none;
+}
+
+.ul-departments {
+    width: 81%;
+    height: 385px;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 36px 54px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.div-users {
+    margin-top: 60px;
+}
+
+.div-users h2 {
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--font-size-30);
+    font-weight: var(--font-weight-700);
+}
+
+.ul-departments-2 {
+    width: 81%;
+    height: 385px;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 36px 54px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.card-users {
+    width: 660px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-blue);
+    height: 196px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-user-modal {
+   width: 30px;
+   height: 30px;
+}
+
+.img-trash-modal {
+    width: 24px;
+    height: 24px;
+}
+
+.card-users h3{
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-700);
+}
+
+.card-users p{
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-400);
+}
+
+.card-users span{
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-400);
+}
+
+.div-img {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 240px;
+}
+
+.div-modal-edit-user {
+    position: fixed;
+    top: 300px;
+    left: 680px;
+    width: 506px;
+    height: 342px;
+    background-color: var(--color-white);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div-modal-edit-user span {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-20);
+    cursor: pointer;
+}
+
+.div-modal-edit-user h2 {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-40);
+    color: var(--color-black);
+}
+
+.select1-modal {
+    width: 100%;
+    height: 52px;
+    padding-left: 10px;
+}
+
+.select1-modal option{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-17);
+    color: var(--color-black);
+}
+
+.div-modal-delete {
+    position: fixed;
+    top: 300px;
+    left: 575px;
+    width: 733px;
+    height: 292px;
+    background-color: var(--color-white);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.div-modal-delete span {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-20);
+    cursor: pointer;
+}
+
+.div-modal-delete h2 {
+    text-align: center;
+    width: 450px;
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-28);
+}
+
+.button-delete {
+    width: 450px;
+    height: 48px;
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-18);
+    background-color: var(--color-green);
+    border: none;
+}
+
+.card-department {
+    width: 660px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-blue);
+    height: 196px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-department h3 {
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-700);
+}
+
+.card-department p {
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-400);
+}
+
+.card-department span {
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-400);
+}

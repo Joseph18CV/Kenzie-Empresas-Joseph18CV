@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME-PAGE</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/globalStyles.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+    <body>
+        <header class="header">
+            <div class="div-header">
+                <div class="ball-purple"></div>
+                <h1>Kenzie Empresas</h1>
+            </div>
+            <img class="button-dropdown" src="./src/img/button-dropdown.png">
+            <div class="buttons">
+                <button class="login2">Login</button>
+                <button class="register2">Cadastro</button>
+            </div>
+        </header>
+        <div class="div-buttons">
+            <button class="login">Login</button>
+            <button class="register">Cadastro</button>
+        </div>
+        <main class="container">
+            <img class="background-img" src="./src/img/background-image.png">
+            <div class="div-container">
+                <select class="select-home" name="Selecionar Setor">
+                    <option value="Selecionar Setor">Selecionar Setor</option>
+                </select>
+                <ul class="listCompanies">
+                </ul>
+            </div>
+        </main>
+        <script type="module" src="./home.js"></script>
+    </body>
+</html>
