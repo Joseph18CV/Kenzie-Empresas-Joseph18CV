@@ -124,13 +124,13 @@ selectOptions()
 
 buttonRegister.addEventListener("click", () => {
     setTimeout(() => {
-        window.location.replace("../register/register.html")
+        window.location.replace("../../register/register.html")
     }, 1000)
 })
 
 buttonLogin.addEventListener("click", () => {
     setTimeout(() => {
-        window.location.replace("../login/login.html")
+        window.location.replace("../../login/login.html")
     }, 1000)
 })
 
@@ -139,12 +139,12 @@ const buttonRegister2 = document.querySelector(".register2")
 
 buttonRegister2.addEventListener("click", () => {
     setTimeout(() => {
-        window.location.replace("../register/register.html")
+        window.location.replace("../../register/register.html")
     }, 1000)
 })
 
 buttonLogin2.addEventListener("click", () => {
     setTimeout(() => {
-        window.location.replace("../login/login.html")
+        window.location.replace("../../login/login.html")
     }, 1000)
 })
