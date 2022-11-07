@@ -75,6 +75,7 @@ body {
     font-family: var(--font-family);
     font-weight: var(--font-weight-700);
     font-size: var(--font-size-18);
+    cursor: pointer;
 }
 
 .register {
@@ -88,6 +89,7 @@ body {
     font-family: var(--font-family);
     font-weight: var(--font-weight-700);
     font-size: var(--font-size-18);
+    cursor: pointer;
 }
 
 .container {
@@ -98,6 +100,7 @@ body {
 
 .buttons {
     display: none;
+    cursor: pointer;
 }
 
 .div-container {
@@ -176,6 +179,7 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-size-18);
     color: var(--color-white);
+    cursor: pointer;
 }
 
 .form span {
@@ -200,6 +204,7 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-size-18);
     color: var(--color-blue);
+    cursor: pointer;
 }
 
 .img-bg {
@@ -213,9 +218,11 @@ body {
     }
     .div-buttons {
         display: none;
+        cursor: pointer;
     }
     .button-dropdown {
         display: none;
+        cursor: pointer;
     }
     .margin-top-normal {
         display: none;
@@ -256,6 +263,7 @@ body {
         font-family: var(--font-family);
         font-weight: var(--font-weight-700);
         font-size: var(--font-size-18);
+        cursor: pointer;
     }
     .register2 {
         width: 134.5px;
@@ -267,10 +275,12 @@ body {
         font-family: var(--font-family);
         font-weight: var(--font-weight-700);
         font-size: var(--font-size-18);
+        cursor: pointer;
     }
     .buttons {
         display: flex;
         gap: 10px;
+        cursor: pointer;
     }
     .container {
         background-image: none;

@@ -41,6 +41,7 @@
     font-family: var(--font-family);
     font-weight: var(--font-weight-700);
     font-size: var(--font-size-18);
+    cursor: pointer;
 }
 
 .container {
@@ -75,11 +76,13 @@
     height: 28px;
     text-align: center;
     border-radius: var(--border-radius-12);
+    cursor: pointer;
 }
 
 .form-button-create {
     display: flex;
     align-items: center;
+    cursor: pointer;
     gap: 18px;
     height: 100%;
     padding-left: 15px;
@@ -102,6 +105,7 @@
     background-color: var(--color-blue);
     text-decoration: none;
     border: none;
+    cursor: pointer;
 }
 
 .ul-departments {
@@ -115,7 +119,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 30px;
 }
 
 .div-users {
@@ -145,7 +149,7 @@
 }
 
 .card-users {
-    width: 660px;
+    width: 640px;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-blue);
     height: 196px;
@@ -158,11 +162,13 @@
 .edit-user-modal {
    width: 30px;
    height: 30px;
+   cursor: pointer;
 }
 
 .img-trash-modal {
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 .card-users h3{
@@ -284,10 +290,11 @@
     font-size: var(--font-size-18);
     background-color: var(--color-green);
     border: none;
+    cursor: pointer;
 }
 
 .card-department {
-    width: 660px;
+    width: 640px;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-blue);
     height: 196px;
@@ -320,3 +327,19 @@
     font-size: var(--font-size-18);
     font-weight: var(--font-weight-400);
 }
+
+.img-trash-dep-modal {
+    width: 26px;
+    cursor: pointer;
+}
+
+.eye-dep-modal {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.edit-department-modal {
+    cursor: pointer;
+}
+

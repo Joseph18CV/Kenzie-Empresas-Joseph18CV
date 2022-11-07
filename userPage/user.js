@@ -1,6 +1,6 @@
 import { getLocalStorage, getUserLocalStorage } from "../scripts/localStorage.js";
 import { getUser, listDepartmentCompanyUser, listUsersDepartment } from "../scripts/requests.js";
-import { editPostModal } from "../scripts/modal.js";
+import { editPostModal } from "../scripts/modal-user.js";
 
 const verifyPermission = () => {
     const user = getLocalStorage()
@@ -20,7 +20,7 @@ buttonLogOut.addEventListener("click", () => {
     setTimeout(function(){
         window.location.replace("../../home.html")
     }, 500)
-})  
+})                                                                                                          
 
 const infoUser = async () => {
 

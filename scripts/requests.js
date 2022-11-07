@@ -1,5 +1,5 @@
 const baseUrl = "http://localhost:6278/"
-import { getLocalStorage, getUserLocalStorage } from "./localStorage.js"
+import { getLocalStorage } from "./localStorage.js"
 import { toastLoginSucess, toastLoginFail, toastRegisterSucess, toastRegisterFail } from "./toast.js"
 
 async function listCompanies () {
@@ -320,9 +320,6 @@ async function deleteUser(id){
                 "Authorization": `Bearer ${localStorage.token}`,
             },
         })
-        const response = await request.json()
-
-        return response
 
     } catch(error){
         console.log(error)
@@ -359,6 +356,126 @@ async function createDepartment (name, description, company_uuid) {
     }
 
 }
+
+async function deleteDepartment(id){
+
+    const localStorage = getLocalStorage()
+    try{
+        const request = await fetch(baseUrl + `departments/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type":"application/json",
+                "Authorization": `Bearer ${localStorage.token}`,
+            },
+        })
+
+    } catch(error){
+        console.log(error)
+    }
+}
+
+async function editDepartment(description, id) {
+
+    const localStorage = getLocalStorage()
+
+    try{
+        const data = {
+            description: `${description}`,
+        }
+
+        const options = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type':'application/json',
+                Authorization: `Bearer ${localStorage.token}`
+            },
+            body:JSON.stringify(data)
+        }
+
+        const responseJSON = await fetch(baseUrl + `departments/${id}`, options)
+        const response = await responseJSON.json()
+    
+        return response
+
+    }catch (error){
+        console.log(error)
+    }
+}
+
+async function hireUser(user_uuid, department_uuid) {
+
+    const localStorage = getLocalStorage()
+
+    try{
+        const data = {
+            user_uuid: `${user_uuid}`,
+            department_uuid: `${department_uuid}`
+        }
+
+        const options = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type':'application/json',
+                Authorization: `Bearer ${localStorage.token}`
+            },
+            body:JSON.stringify(data)
+        }
+
+        const responseJSON = await fetch(baseUrl + "departments/hire", options)
+        const response = await responseJSON.json()
+    
+        return response
+
+    }catch (error){
+        console.log(error)
+    }
+}
+
+async function dismissUser(id) {
+
+    const localStorage = getLocalStorage()
+
+    try{
+        const options = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type':'application/json',
+                Authorization: `Bearer ${localStorage.token}`
+            },
+        }
+
+        const responseJSON = await fetch(baseUrl + `departments/dismiss/${id}`, options)
+        const response = await responseJSON.json()
+    
+        return response
+
+    }catch (error){
+        console.log(error)
+    }
+}
+
+async function listUsersNotDepartment () {
+
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(baseUrl + "admin/out_of_work", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+
+        const response = await request.json()
+
+        return response
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export {
     listCompanies,
     listSectorCompanies,
@@ -374,5 +491,10 @@ export {
     editUser,
     deleteUser, 
     verifyAdm,
-    createDepartment
+    createDepartment,
+    deleteDepartment,
+    editDepartment,
+    hireUser,
+    dismissUser,
+    listUsersNotDepartment
 }

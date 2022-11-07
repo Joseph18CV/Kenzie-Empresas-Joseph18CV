@@ -1,7 +1,6 @@
 import { getLocalStorage, getUserLocalStorage } from "../scripts/localStorage.js";
-import { deleteUserModal, editUserModal, createDepartmentModal } from "../scripts/modal.js";
+import { deleteUserModal, editUserModal, createDepartmentModal, deleteDepartmentModal, editDepartmentModal, modalEyeDepartment } from "../scripts/modal-adm.js";
 import { listCompanies, allUsers, listDepartments } from "../scripts/requests.js";
-
 
 const verifyPermission = () => {
     const user = getLocalStorage()
@@ -41,6 +40,9 @@ const renderAllUsers = async () => {
     const departments = await listDepartments()
     const users = await allUsers()
     users.forEach((user) => {
+        if(user.username == "ADMIN"){
+
+        }else{
         const li = document.createElement("li")
               li.classList.add("card-users")
         const name = document.createElement("h3")
@@ -72,18 +74,19 @@ const renderAllUsers = async () => {
                       background.classList.remove("d-none")
                       editUserModal(user.username, user.email, user.uuid)
               })
-        const imgTrash = document.createElement("img")
-              imgTrash.classList.add("img-trash-modal")
-              imgTrash.src = "../src/img/trash.png"
-              imgTrash.addEventListener("click", () => {
+            const imgTrash = document.createElement("img")
+                  imgTrash.classList.add("img-trash-modal")
+                  imgTrash.src = "../src/img/trash.png"
+                  imgTrash.addEventListener("click", () => {
                 const background = document.querySelector(".modal-wrapper")
                       background.classList.remove("d-none")
                       deleteUserModal(user.uuid, user.username)
-              })
+                })
 
-        divImg.append(imgEdit, imgTrash)
-        li.append(name, pl, span, divImg)
-        ulList.append(li)
+            divImg.append(imgEdit, imgTrash)
+            li.append(name, pl, span, divImg)
+            ulList.append(li)
+        }
     })
 }
 renderAllUsers()
@@ -109,9 +112,41 @@ const renderDepartments = async (departments) => {
                   span.innerText = department.companies.name
             const divImg = document.createElement("div")
                   divImg.classList.add("div-img")
+            const eyeDep = document.createElement("img")
+                  eyeDep.classList.add("eye-dep-modal")
+                  eyeDep.src = "../src/img/eye.png"
+                  eyeDep.addEventListener("click", async (e) => {
+                    const background = document.querySelector(".modal-wrapper")
+                          background.classList.remove("d-none")
+                          modalEyeDepartment(
+                            department.name, 
+                            department.description, 
+                            department.companies.name, 
+                            department.uuid
+                            )
+                    })
 
+            const imgEdit = document.createElement("img")
+                  imgEdit.classList.add("edit-department-modal")
+                  imgEdit.src = "../src/img/edit black.png"
+                  imgEdit.addEventListener("click", () => {
+                    const background = document.querySelector(".modal-wrapper")
+                          background.classList.remove("d-none")
+                          editDepartmentModal(department.uuid, department.description)
+              })    
+
+            const imgTrash = document.createElement("img")
+                  imgTrash.classList.add("img-trash-dep-modal")
+                  imgTrash.src = "../src/img/trash.png"
+                  imgTrash.addEventListener("click", () => {
+                    deleteDepartmentModal(department.uuid, department.name)
+                        const background = document.querySelector(".modal-wrapper")
+                              background.classList.remove("d-none")
+                  })     
+
+            divImg.append(eyeDep, imgEdit, imgTrash)
             li.append(h3, p, span, divImg)
-            ulList.append(li)
+            ulList.appendChild(li)
           })
 }
 renderDepartments(departments)
@@ -134,15 +169,8 @@ selectOptions()
 
 const formCreateDep = document.querySelector(".form-button-create")
 
-const companies = await listCompanies()
-
-      formCreateDep.addEventListener("click", () => {
-        createDepartmentModal()
-        companies.forEach((company) => {
-            departments.forEach((department) => {
-                const background = document.querySelector(".modal-wrapper")
-                background.classList.remove("d-none")
-                createDepartmentModal(department.name, department.description, company.uuid)
-            })
-        })
-    })
+formCreateDep.addEventListener("click", () => {
+    const background = document.querySelector(".modal-wrapper")
+    background.classList.remove("d-none")
+    createDepartmentModal()
+})
